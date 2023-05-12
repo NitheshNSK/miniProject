@@ -4,3 +4,4 @@ added to mini projects
 2.TODO created by using HTML Js and CSS (on progress not completed fully)
 have to complete only one section to complete the project
 to strike the string wich is dynamically generated
+working in Xboard webpage
