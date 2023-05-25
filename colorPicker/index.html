@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo-label.done {
+  text-decoration: line-through;
+}
+
+    </style>
+</head>
+<body>
+  <ul id="todo-list">
+  </ul>
+  
+      <script>
+      const todoList = document.getElementById('todo-list');
+
+todoList.addEventListener('click', (event) => {
+  if (event.target.type === 'checkbox') {
+    const label = event.target.nextElementSibling;
+    if (event.target.checked) {
+      label.classList.add('done');
+    } else {
+      label.classList.remove('done');
+    }
+  }
+});
+
+function addTodoItem(text) {
+  const li = document.createElement('li');
+  const label = document.createElement('label');
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  label.appendChild(checkbox);
+  label.appendChild(document.createTextNode(text));
+  li.appendChild(label);
+  todoList.appendChild(li);
+}  
+
+addTodoItem("hai")
+
+
+
+      </script>
+</body>
+</html>
